@@ -78,7 +78,6 @@ div {
 
 /* модальное окно */
 .mod {
-    display: none; 
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -109,6 +108,9 @@ div {
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  /* Task2.html */
   .result {
     color:#337339;
   }
