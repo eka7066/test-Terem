@@ -7,10 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-</head>
+    <script src="js/4getRequest.js"></script>
+  </head>
 <body>
-  
     <label for="list-1">Cписок 1</label>
     <select class="list" id="list-1">
       <option value="1">1</option>
@@ -52,35 +51,11 @@
       <option value="5">5</option>
     </select> 
     <br><br>
-    <input type="text" id="field-one" maxlength="60" placeholder="Поле 1"><br>
-    <input type="text" id="field-two" maxlength="60" placeholder="Поле 2"><br>
+    <input type="text" class="field" id="field-one" maxlength="60" placeholder="Поле 1"><br>
+    <input type="text" class="field" id="field-two" maxlength="60" placeholder="Поле 2"><br>
     <button onclick="sendJSON()">Отправить форму</button>
   
-  <script>
-    function sendJSON() {
-      let fieldOne = document.querySelector('#field-one');
-      let fieldTwo = document.querySelector('#field-two');
-      let listsOne = document.querySelector('#list-1');
-      let listsTwo = document.querySelector('#list-2');
-      let listsThree = document.querySelector('#list-3');
-      let listsFour = document.querySelector('#list-4');
-      let listsFive = document.querySelector('#list-5');
-      let result = document.querySelector('.result');
-      let xhr = new XMLHttpRequest();
-      let url = "http://borekat.ru/projects/json/json.php";      
-      xhr.open("POST", url, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      let data = JSON.stringify({ "list1": listsOne.value,"list2": listsTwo.value,"list3": listsThree.value,"list4": listsFour.value,"list5": listsFive.value, "fieldOne": fieldOne.value, "fieldTwo": fieldTwo.value });
-      result.innerHTML = data;
-      xhr.open("GET", url, true);
-      xhr.onload = function (){
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            alert(xhr.responseText);
-        }
-      }
-      xhr.send(data);
-    }
-  </script>
+  
 
   <p class="result">
 
