@@ -1,9 +1,8 @@
 //модальное окно
-
-const modal = $('.myModal');
+const modal = $('.mod');
 
 $(document).ready(function(){
-	modal.toggle();
+	modal.show();
   $(window).click(function(){
   	modal.hide();
   });
