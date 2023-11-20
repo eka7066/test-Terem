@@ -7,10 +7,15 @@ div {
     border: solid 1px black;
 }
 
-#first {
+.hidden {
+    display: none;
+}
+
+.headline {
     width: 100%;
     text-align: center;
 }
+
 .conteiner-one {
     display: flex;
     width: 100%;
@@ -22,41 +27,44 @@ div {
     justify-content: space-around;
     margin-bottom: 15px;
 }
+
+.toggle {
+    order: 1;
+}
+
 .item {
     width: 300px;
     height: 300px;
-    
+    display: block;
+    position: relative;
 }
-#second {
+
+.one {
     background-color: #7b2b41;
-    order: 1;
 }
-#third {
+
+.two {
     background-color: #afafd2;
-    border-style: dashed;
-    order: 2;
+    border-style: dashed;  
 }
-.toggle {
-    order: 3 !important;
-}
-#fourth {
+
+.three {
     background-color: #80bc6c;
     order: 3;
 }
 
-#fifth {
+.four {
     text-align: center;
     width: 300px;
     height: 300px;
-    position: relative;
 }
-#sixth {
+
+.five {
     text-align: center;
     width: 600px;
-    height: 300px;
-    position: relative;
-    
+    height: 300px; 
 }
+
 .container-two {
     display: flex;
     width: 100%;
@@ -65,10 +73,9 @@ div {
     margin: auto;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    flex-flow: row nowrap;
-
-   
+    flex-flow: row nowrap;  
 }
+
 .btn-cont {
     width: 100%;
     border: none;
@@ -94,6 +101,7 @@ div {
     overflow: auto; 
     background-color: rgba(0, 0, 0, 0.358);
   }
+
   .mod-content {
     background-color: #fefefe;
     margin: 15% auto; 
@@ -116,10 +124,10 @@ div {
     .item {
         width: 100%;
     }
-    #fifth {
+    .four {
         width: 100%;
     }
-    #sixth {
+    .five {
         width: 100%;
     }
 }
@@ -130,7 +138,7 @@ div {
     .item {
         width: 100%;
     }
-    #fifth {
+    .four {
         width: 100%;
     }
     

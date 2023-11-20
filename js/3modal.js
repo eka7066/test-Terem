@@ -1,6 +1,6 @@
 //модальное окно
 
-const modal = $('#myModal');
+const modal = $('.myModal');
 
 $(document).ready(function(){
 	modal.toggle();
