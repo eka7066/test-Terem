@@ -1,11 +1,11 @@
 $(document).ready(function () {
   function submitForm() {
     let data = JSON.stringify($("#form1").serializeArray());
-    postDataOnPage(data);
+    innerData(data);
     return data;
   }
 
-  function postDataOnPage(data) {
+  function innerData(data) {
     const result = document.querySelector('.result');
     result.innerHTML = data;
   }
